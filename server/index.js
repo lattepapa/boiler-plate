@@ -33,6 +33,11 @@ mongoose
 // 기본 라우팅
 app.get("/", (req, res) => res.send("Hello World!"));
 
+// 랜딩페이지 라우팅
+app.get("/api/hello", (req, res) => {
+  res.send("안녕하세요");
+});
+
 // 회원가입 라우팅
 app.post("/api/users/register", (req, res) => {
   // 회원가입할 때 필요한 정보들을 client가 보낸 req에서 가져오면,
